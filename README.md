@@ -1,4 +1,5 @@
-# koi-language![koi-logos_white](https://user-images.githubusercontent.com/70734883/160219279-7ea2b6b4-9c64-4a7b-888b-a98a3da46a5d.png)
+![koi](https://user-images.githubusercontent.com/70734883/160219470-1609c3b5-09c0-476b-a3f6-3f31022df15c.png)
+
 
 ## Koi Programming language
 
