@@ -1,6 +1,5 @@
+![koi (1)](https://user-images.githubusercontent.com/70734883/160219571-4c4d1628-1d6d-4c8a-8d12-9be4676ced71.png)
 
-
-https://user-images.githubusercontent.com/70734883/160219543-f6ba7774-7f1d-4c03-8ae1-30ab21b77312.mp4
 
 
 
