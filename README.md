@@ -8,6 +8,9 @@
 
 This is a passion project for me to learn how to build a programming language from scratch. For now it will be written in Java, later implementations may be done in C. 
 
+## Current Features
++ Scanner
+
 ### Features to be added
 + Object Oriented
 + Classes
