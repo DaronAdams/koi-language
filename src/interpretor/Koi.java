@@ -25,7 +25,9 @@ import java.util.List;
 */
 
 public class Koi {
+    private static final Interpreter interpreter = new Interpreter();
     static boolean hadError = false;
+    static boolean hadRuntimeError = false;
 
     public static void main(String[] args) throws IOException {
         if (args.length > 1) {
@@ -45,6 +47,8 @@ public class Koi {
         // Show error in the exit code
         if (hadError)
             System.exit(65);
+        if (hadRuntimeError)
+            System.exit(70);
     }
 
     // Runs the prompt where code can be entered and executed one line at a time
@@ -64,11 +68,15 @@ public class Koi {
     private static void run(String source) {
         Scanner scanner = new Scanner(source);
         List<Token> tokens = scanner.scanTokens();
+        Parser parser = new Parser(tokens);
+        Expr expression = parser.parse();
 
-        // Temporarily just printing the tokens
-        for (Token token : tokens) {
-            System.out.println(token);
-        }
+        // Stop if there is a syntax error.
+        if (hadError) return;
+
+        interpreter.interpret(expression);
+
+
     }
 
     static void error(int line, String message) {
@@ -90,5 +98,11 @@ public class Koi {
             report(token.line, " at '" + token.lexeme + "'", message);
         }
 
+    }
+
+    static void runTimeError(RuntimeError error) {
+        System.err.println(error.getMessage() +
+                "/n[line " + error.token.line + "]");
+        hadRuntimeError = true;
     }
 }
