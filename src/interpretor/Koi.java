@@ -57,7 +57,7 @@ public class Koi {
             String line = reader.readLine();
             if (line == null) break;
             run(line);
-            hadError = false; // reseting the flag in the loop
+            hadError = false; // resetting the flag in the loop
         }
     }
 
@@ -71,7 +71,6 @@ public class Koi {
         }
     }
 
-    // Basic Error handling
     static void error(int line, String message) {
         report(line, "", message);
     }
@@ -81,5 +80,15 @@ public class Koi {
         System.err.println(
                 "[line " + line + "] Error" + where + ": " + message);
         hadError = true;
+    }
+
+    // Basic Error handling
+    static void error(Token token, String message) {
+        if (token.type == TokenType.EOF) {
+            report(token.line, "", message);
+        } else {
+            report(token.line, " at '" + token.lexeme + "'", message);
+        }
+
     }
 }
