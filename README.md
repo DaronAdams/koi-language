@@ -10,6 +10,7 @@ This is a passion project for me to learn how to build a programming language fr
 
 ## Current Features
 + Scanner
++ Parser
 
 ### Features to be added
 + Object Oriented
