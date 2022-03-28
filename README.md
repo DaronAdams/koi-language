@@ -12,6 +12,7 @@ This is a passion project for me to learn how to build a programming language fr
 + Scanner
 + Parser
 + Basic Interpreter
++ Basic Error Handling
 
 ### Features to be added
 + Object Oriented
