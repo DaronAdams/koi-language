@@ -1,4 +1,4 @@
-//> Appendix II stmt
+
 package interpretor;
 
 import java.util.List;
@@ -16,8 +16,7 @@ abstract class Stmt {
     R visitWhileStmt(While stmt);
   }
 
-  // Nested Stmt classes here...
-//> stmt-block
+
   static class Block extends Stmt {
     Block(List<Stmt> statements) {
       this.statements = statements;
@@ -30,8 +29,7 @@ abstract class Stmt {
 
     final List<Stmt> statements;
   }
-//< stmt-block
-//> stmt-class
+
   static class Class extends Stmt {
     Class(Token name,
           Expr.Variable superclass,
@@ -50,8 +48,7 @@ abstract class Stmt {
     final Expr.Variable superclass;
     final List<Stmt.Function> methods;
   }
-//< stmt-class
-//> stmt-expression
+
   static class Expression extends Stmt {
     Expression(Expr expression) {
       this.expression = expression;
@@ -64,8 +61,7 @@ abstract class Stmt {
 
     final Expr expression;
   }
-//< stmt-expression
-//> stmt-function
+
   static class Function extends Stmt {
     Function(Token name, List<Token> params, List<Stmt> body) {
       this.name = name;
@@ -82,8 +78,7 @@ abstract class Stmt {
     final List<Token> params;
     final List<Stmt> body;
   }
-//< stmt-function
-//> stmt-if
+
   static class If extends Stmt {
     If(Expr condition, Stmt thenBranch, Stmt elseBranch) {
       this.condition = condition;
@@ -100,8 +95,7 @@ abstract class Stmt {
     final Stmt thenBranch;
     final Stmt elseBranch;
   }
-//< stmt-if
-//> stmt-print
+
   static class Print extends Stmt {
     Print(Expr expression) {
       this.expression = expression;
@@ -114,8 +108,7 @@ abstract class Stmt {
 
     final Expr expression;
   }
-//< stmt-print
-//> stmt-return
+
   static class Return extends Stmt {
     Return(Token keyword, Expr value) {
       this.keyword = keyword;
@@ -130,8 +123,7 @@ abstract class Stmt {
     final Token keyword;
     final Expr value;
   }
-//< stmt-return
-//> stmt-var
+
   static class Var extends Stmt {
     Var(Token name, Expr initializer) {
       this.name = name;
@@ -146,8 +138,7 @@ abstract class Stmt {
     final Token name;
     final Expr initializer;
   }
-//< stmt-var
-//> stmt-while
+
   static class While extends Stmt {
     While(Expr condition, Stmt body) {
       this.condition = condition;
@@ -162,8 +153,8 @@ abstract class Stmt {
     final Expr condition;
     final Stmt body;
   }
-//< stmt-while
+
 
   abstract <R> R accept(Visitor<R> visitor);
 }
-//< Appendix II stmt
+
