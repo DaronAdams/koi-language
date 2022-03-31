@@ -55,7 +55,7 @@ public class Koi {
     private static void runPrompt() throws IOException {
         InputStreamReader input = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(input);
-        // Prompt is exited by "Cntr - D" signaling the end condition to the line reader
+        // Prompt is exited by "Control - D" signaling the end condition to the line reader
         for (;;) {
             System.out.print("> ");
             String line = reader.readLine();
@@ -86,7 +86,7 @@ public class Koi {
     // Showing the user what line the error is on
     private static void report(int line, String where, String message) {
         System.err.println(
-                "[line " + line + "] Error" + where + ": " + message);
+                "[line " + line + "] Error" + where + "; " + message);
         hadError = true;
     }
 
