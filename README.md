@@ -17,9 +17,11 @@ This is a passion project for me to learn how to build a programming language fr
 
 ## Demos
 Expressions
-![](../../Screen Shot 2022-03-28 at 8.38.05 AM.png)
+
+
 Simple Arithmetic 
-![](../../../../../var/folders/q3/2phv48915kn6bybt5v_599f80000gn/T/TemporaryItems/NSIRD_screencaptureui_QjiWqg/Screen Shot 2022-03-28 at 8.43.46 AM.png)
+<img width="465" alt="Screen Shot 2022-03-28 at 8 38 05 AM" src="https://user-images.githubusercontent.com/70734883/160411593-d0c3ee3c-ea3c-4316-8ee3-685fdc652550.png">
+
 ### Features to be added
 + Object Oriented
 + Classes
